@@ -1,0 +1,45 @@
+@VetApi_HostAddress = http://localhost:5164
+
+GET {{VetApi_HostAddress}}/Treatment
+Accept: application/json
+
+###
+GET {{VetApi_HostAddress}}/Treatment/1
+Accept: application/json
+
+###
+GET {{VetApi_HostAddress}}/Treatment/RevByAnimal/0
+Accept: application/json
+
+###
+GET {{VetApi_HostAddress}}/Treatment/TrFrequency
+Accept: application/json
+
+###
+DELETE {{VetApi_HostAddress}}/Treatment/1
+Accept: application/json
+
+###
+POST {{VetApi_HostAddress}}/Treatment
+Content-Type: application/json
+Accept: application/json
+{
+    "name": "uj",
+    "type": 1,
+    "startDate": "2024-01-03T14:00:00",
+    "endDate": "2024-01-03T15:30:00",
+    "price": 220
+}
+
+###
+PUT {{VetApi_HostAddress}}/Treatment
+Content-Type: application/json
+Accept: application/json
+{
+      "id": 2,
+    "name": "Cognitive Behavioral ",
+    "type": 2,
+    "startDate": "2024-01-03T14:00:00",
+    "endDate": "2024-01-03T15:30:00",
+    "price": 670
+}
